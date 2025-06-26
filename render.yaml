@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: course-student-api
-    env: java
-    buildCommand: "./mvnw clean package -DskipTests"
-    startCommand: "java -jar target/CourseStudentAPI-0.0.1-SNAPSHOT.jar"
-    envVars:
-      - key: PORT
-        value: 8080

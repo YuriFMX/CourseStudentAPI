@@ -1,11 +1,16 @@
 spring:
   datasource:
-    url: ${DATABASE_URL}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/coursestudentdb
+    username: postgres
+    password: 123senha
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-server:
-  port: ${PORT:8080}
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
